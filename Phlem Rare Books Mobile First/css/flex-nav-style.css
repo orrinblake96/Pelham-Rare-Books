@@ -19,16 +19,17 @@ h1 {
 }
 
 h3, h2 {
-	font-size: 22px;
+	font-size: 26px;
     text-align: center;
     padding-bottom: 5px;
     color: #111111;
 }
 
 h4 {
-    color: #afa28c;
+    color: #111111;
     display: inline;
-    font-size: 22px;
+	font-size: 22px;
+	padding-bottom: 10%;
 }
 
 h6 {
@@ -37,9 +38,9 @@ h6 {
 }
 
 p {
-    color: #afa28c;
+    color: #111111;
     display: inline;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 img.homePageMainImage {
@@ -103,7 +104,8 @@ ul {
 	color: #afa28c;
 	display: inline;
 	font-size: 26px;
-	color: #afa28c;
+	background-color: #794e3ffc;
+	border-radius: 12px;
 	text-decoration: none;
 	padding: 8px;
 }
@@ -113,7 +115,7 @@ ul {
 .postInputToggle {
 	padding: 10px;
 	height: auto;
-	background-color: #8D5A49;
+	background-color: #794e3ffc;
 	font-size: 26px;
 	color: #afa28c;
 	display: block;
@@ -121,7 +123,7 @@ ul {
 	margin-right: auto;
 	margin-top: 20px;
 	border-radius: 12px;
-	border-color: #8D5A49;
+	border-color: #794e3ffc;
 }
 
 #inputForm {
@@ -181,10 +183,10 @@ input[type=text], select, textarea {
     border-radius: 3px;
 }
 
-.favoriteButton {
+.favoriteButton, .buyButton {
 	padding: 10px;
 	height: auto;
-	background-color: #8D5A49;
+	background-color: #794e3ffc;
 	font-size: 26px;
 	color: #afa28c;
 	display: block;
@@ -192,13 +194,14 @@ input[type=text], select, textarea {
 	margin-right: auto;
 	margin-top: 20px;
 	border-radius: 12px;
-	border-color: #8D5A49;
+	border-color: #794e3ffc;
+	display: inline;
 }
 
 #postNameButton {
 	padding: 10px;
 	height: auto;
-	background-color: #8D5A49;
+	background-color: #794e3ffc;
 	font-size: 26px;
 	color: #afa28c;
 	display: block;
@@ -206,7 +209,7 @@ input[type=text], select, textarea {
 	margin-right: auto;
 	margin-top: 20px;
 	border-radius: 12px;
-	border-color: #8D5A49;
+	border-color: #794e3ffc;
 }
 
 #leftColCard {
@@ -289,7 +292,7 @@ input[type=text], select, textarea {
 img.popularPostImages {
 	width: 100px;
     height: 120px;
-    text-align: center;
+    text-align: left;
 	border-radius: 5px;
 	display: inline-block;
 }
@@ -353,6 +356,7 @@ a.socials{
 		display: block;
 	}
 	a.socials:hover {
+		cursor: pointer;
 		letter-spacing: 3px;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
@@ -382,7 +386,7 @@ a.socials{
 		padding: 10px;
 		height: 120px;
 		display: block;
-		align-items: center;
+		align-items: left;
 		margin: inherit; 
 	}
 	.popularPosts {
@@ -410,6 +414,7 @@ a.socials{
 		font-size: 25px;
 	}
 	.button a:hover {
+		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
 		border-radius: 12px;
@@ -418,7 +423,8 @@ a.socials{
 		border-color: blueviolet;
 		letter-spacing: 1px;
 	}
-	.favoriteButton:hover {
+	.favoriteButton:hover, .buyButton:hover {
+		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
 		border-radius: 12px;
@@ -428,6 +434,7 @@ a.socials{
 		letter-spacing: 1px;
 	}
 	.postInputToggle:hover {
+		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
 		border-radius: 12px;
@@ -437,6 +444,7 @@ a.socials{
 		letter-spacing: 1px;
 	}
 	#postNameButton:hover {
+		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
 		border-radius: 12px;
@@ -444,6 +452,14 @@ a.socials{
 		background-color: green;
 		border-color: green;
 		letter-spacing: 1px;
+	}
+	img.logo:hover {
+		cursor: pointer;
+		width: 60.5%;
+		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

@@ -135,26 +135,37 @@ function getPostDetails() {
         leftColCard.innerHTML += "<h4>" + "Genre: </h4>" + "<p>" + productsArray[i].genre + "</p> <br>";
         leftColCard.innerHTML += "<h4>" + "Description:  </h4>" + "<p>" + productsArray[i].info + "</p> <br>";
         leftColCard.innerHTML += "<button class='favoriteButton' value='" + i + "' onclick='addToFavorites(this)'>Add to Favorites</button>";
+        leftColCard.innerHTML += " <button class='buyButton' value='" + i + "' onclick='buyBook(this)'>Buy Book</button>";
     }
 }
 window.onload = getPostDetails();
 
 //add to favoriteBooks array
 function addToFavorites(object) {
-    favoriteBooks.unshift(
-        {
-            bookImage: productsArray[object.value].bookImage,
-            bookName: productsArray[object.value].bookName
-        }
-    );
-    updateFavoriteBooks();
+    if (object.innerHTML != "Added"){
+        object.innerHTML = "Added";
+        favoriteBooks.unshift(
+            {
+                bookImage: productsArray[object.value].bookImage,
+                bookName: productsArray[object.value].bookName
+            }
+        );
+        updateFavoriteBooks();
+    } 
 }
 
 //update favorites section on right column
 function updateFavoriteBooks(){
     var rightColCard = document.getElementById("favoriteBooks");
-    rightColCard.innerHTML +=
-        "<a class='favoriteBooks'><img class='popularPostImages' src='" + favoriteBooks[0].bookImage + "' />" + favoriteBooks[0].bookName + "</a>";
+    rightColCard.innerHTML += "<img class='popularPostImages' src='" + favoriteBooks[0].bookImage + "' />" + "<br>";
+    rightColCard.innerHTML += "<p>" + favoriteBooks[0].bookName + "</p> <br>";
+
+}
+
+//Buy Book when button is clicked
+function buyBook(object) {
+    object.innerHTML = "Bought!!";
+    
 }
 
 //Create a book post by getting the user input from the html form
