@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Phelm Rare Books</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet preload"
+		type="text/css">
+	<link rel="shortcut icon" type="image/png" href="images/faviconV2.png" />
+	<link href="css/flex-nav-style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<a href="index.html">
+		<img class="logo" src="images/logoV3.png" />
+	</a>
+
+	<nav>
+		<ul class="menu">
+			<li class="item button"><a class="navBar" href="index.html"> <i class="fa fa-home"></i> Home</a></li>
+			<li class="item button"><a class="navBar" href="about.html"></i><i class="fas fa-info-circle"></i> About</a></li>
+			<li class="item button"><a class="navBar" href="products.html"><i class="fas fa-book"></i> Products</a></li>
+			<li class="item button"><a class="navBar" href="contact-page.html"> <i class="fa fa-address-book"></i> Contact</a></li>
+			<li class="toggle" content-align="right"><a href="#"><i class="fas fa-bars"></i></a></li>
+		</ul>
+	</nav>
+
+
+	<button onclick="toggleInputForm()" id="formButton" class="postInputToggle">Upload a Book</button>
+
+	<div id="inputForm" class="container">
+		<form>
+			<div class="bookInfoInputRow">
+				<div class="bookInfoInputHeadings">
+					<label for="bookName">Book Name</label>
+				</div>
+				<div class="bookInfoInputBox">
+					<input type="text" id="postBookName" name="postBookName" placeholder="Book Name">
+				</div>
+			</div>
+			<div class="bookInfoInputRow">
+				<div class="bookInfoInputHeadings">
+					<label for="book">Book Image</label>
+				</div>
+				<div class="bookInfoInputBox">
+					<input type="text" id="postBookImage" name="postBookImage" placeholder="Book Image">
+				</div>
+			</div>
+			<div class="bookInfoInputRow">
+				<div class="bookInfoInputHeadings">
+					<label for="postBookAuthor">Book Author</label>
+				</div>
+				<div class="bookInfoInputBox">
+					<input type="text" id="postBookAuthor" name="postBookAuthor" placeholder="Book Author">
+				</div>
+			</div>
+			<div class="bookInfoInputRow">
+				<div class="bookInfoInputHeadings">
+					<label for="postBookPrice">Book Price</label>
+				</div>
+				<div class="bookInfoInputBox">
+					<input type="text" id="postBookPrice" name="postBookPrice" placeholder="Book Price">
+				</div>
+			</div>
+			<div class="bookInfoInputRow">
+				<div class="BookInfoInputHeadings">
+					<label for="postBookGenre">Book Genre</label>
+				</div>
+				<div class="bookInfoInputBox">
+					<select id="postBookGenre" name="postBookGenre">
+						<option value="Fantasy">Fantasy</option>
+						<option value="History">History</option>
+						<option value="Realigious">Realigious</option>
+						<option value="Fiction">Fiction</option>
+						<option value="Mystery">Mystery</option>
+						<option value="Thriller">Thriller</option>
+					</select>
+				</div>
+			</div>
+			<div class="bookInfoInputRow">
+				<div class="bookInfoInputHeadings">
+					<label for="postText">Book Description</label>
+				</div>
+				<div class="bookInfoInputBox">
+					<textarea id="postText" name="postText" placeholder="Book Description"
+						style="height:200px"></textarea>
+				</div>
+			</div>
+			<div class="bookInfoInputRow">
+				<input id="postNameButton" onclick="createBookPost();return false;" type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+
+	<!-- create side panls and main section -->
+	<div class="row">
+		<div class="leftcolumn">
+			<div id="productsInfo" class="productsInfo card">
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div class="bookCoversCard">
+				<h3>Popular Book Covers</h3>
+				<p class="popularPosts">
+					<img class="popularPostImages" src="https://tullycraft.files.wordpress.com/2010/09/moby-dick.jpg" />
+					<img class="popularPostImages"
+						src="https://images-na.ssl-images-amazon.com/images/I/51LfWB1H1PL._SX326_BO1,204,203,200_.jpg" />
+					<img class="popularPostImages"
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1dwUpPxN6Ujof7nv_Rx_klfRdRKFwPqDAdi7BJMradcBFaY26&s" />
+				</p>
+			</div>
+
+			<div class="socialCard">
+				<h3>Socials</h3>
+				<a class="socials" href="https://twitter.com/OrrinJBlake"><i
+						class="fab fa-twitter twitter__bird"></i></a>
+				<a class="socials" href="https://www.facebook.com/orrin.blake"><i
+						class="fab fa-facebook facebook__logo"></i></a>
+				<a class="socials" href="https://www.instagram.com/orrinblake"><i
+						class="fab fa-instagram Instagram__logo"></i></a>
+			</div>
+
+			<div class="favoriteCard">
+				<h3>Favorite Books</h3>
+				<p id="favoriteBooks" class="favoriteBooks">
+
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/nav-script.js"></script>
+</body>
+
+</html>

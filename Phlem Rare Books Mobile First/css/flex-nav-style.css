@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+    font-family: "asap";
+    background-color: #D7AB6B;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: left;
+}
+
+h3, h2 {
+	font-size: 22px;
+    text-align: center;
+    padding-bottom: 5px;
+    color: #111111;
+}
+
+h4 {
+    color: #afa28c;
+    display: inline;
+    font-size: 22px;
+}
+
+h6 {
+	color: #afa28c;
+	font-size: 18px;
+}
+
+p {
+    color: #afa28c;
+    display: inline;
+	font-size: 16px;
+}
+
+img.homePageMainImage {
+	width: 100%;
+	border-radius: 12px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.logo{
+	width: 60%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav{
+	background: #8D5A49;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+/*---------------------- Style Dropdown Menu ------------------------------*/
+ul {
+    list-style-type: none;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+.toggle {
+    order: 1;
+}
+.toggle a {
+    font-size: 30px;
+	color: black;
+}
+.item.button {
+    order: 2;
+}
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active {
+    display: block;
+}
+.button a {
+	color: #afa28c;
+	display: inline;
+	font-size: 26px;
+	color: #afa28c;
+	text-decoration: none;
+	padding: 8px;
+}
+/*---------------------------------------------------------------------------*/
+
+/*----------------------Style Input Form------------------------------------*/
+.postInputToggle {
+	padding: 10px;
+	height: auto;
+	background-color: #8D5A49;
+	font-size: 26px;
+	color: #afa28c;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border-radius: 12px;
+	border-color: #8D5A49;
+}
+
+#inputForm {
+    display: none;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #8D5A49;
+    color: #afa28c;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .container {
+    background-color: #D7AB6B;
+    padding: 20px;
+  }
+  
+  .bookInfoInputHeadings {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .bookInfoInputBox {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  .bookInfoInputRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/* ---------------------------------------------------------------------------------- */
+
+.productsInfo {
+    padding: 7.5px 35px;
+    color: #afa28c;
+    border: 1px #111111 solid;
+    border-radius: 3px;
+}
+
+.favoriteButton {
+	padding: 10px;
+	height: auto;
+	background-color: #8D5A49;
+	font-size: 26px;
+	color: #afa28c;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border-radius: 12px;
+	border-color: #8D5A49;
+}
+
+#postNameButton {
+	padding: 10px;
+	height: auto;
+	background-color: #8D5A49;
+	font-size: 26px;
+	color: #afa28c;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border-radius: 12px;
+	border-color: #8D5A49;
+}
+
+#leftColCard {
+	text-align: left;
+}
+
+/* Left column */
+.leftcolumn, .rightColumn {
+	width: 100%;
+	padding: 0%
+}
+
+/* Post image */
+.postImageDisplayed {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: 20px;
+}
+
+.bookImage {
+    background-color: #aaa;
+    width: 200px;
+    height: 250px;
+  }
+
+/* Add a card effect for articles */
+.card {
+	background-color: #8D5A49;
+	padding: 13px;
+	margin-top: 20px;
+	border-radius: 12px;
+	border-color: #8D5A49;
+}
+
+.bookCoversCard, .socialCard, .favoriteCard, .addressCard{
+	background-color: #8D5A49;
+	padding: 13px;
+	margin-top: 20px;
+	border-radius: 12px;
+	border-color: #8D5A49;
+	text-align: center;
+}
+
+.addressCard {
+	text-align: left;
+}
+
+.address {
+	color: #afa28c;
+	font-size: 16px;
+	display: block;
+}
+
+.officeHours {
+	color: #afa28c;
+	font-size: 16px;
+	display: block;
+}
+
+.bookCard {
+    background-color: #D7AB6B;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.row{
+	text-align: center;
+}
+/* Create table after row to keep spacing */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Popular post images */
+img.popularPostImages {
+	width: 100px;
+    height: 120px;
+    text-align: center;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+/* Create popular post & socials section */
+a.socials{
+    display: inline-flex;
+	padding: inherit;
+    height: 120px;
+    align-items: center;
+	margin: 5px;
+}
+
+.popularPosts{
+	padding: inherit;
+    height: 120px;
+   	align-items: center;
+	text-align: center;
+	margin: 5px;
+}
+
+/*----------------------- Twitter --------------------*/
+.twitter__bird {
+    margin-left: auto;
+    margin-right: auto;
+	color: #6699FF;
+    font-size: 5em;
+}
+/*------------------------------------------------------*/
+
+/*----------------------- Facebook --------------------*/
+.facebook__logo {
+    margin-left: auto;
+    margin-right: auto;
+	color: #3b5998;
+    font-size: 5em;
+}
+/*------------------------------------------------------*/
+
+/*----------------------- Instagram --------------------*/
+.Instagram__logo {
+    margin-left: auto;
+    margin-right: auto;
+	color: #C13584;
+    font-size: 5em;
+}
+/*------------------------------------------------------*/
+
+/*----------If screen is above 670 px then change nav bar styling-----------*/
+
+@media only screen and (min-width: 670px) {
+	.toggle{
+		display: none;
+	}
+	.item {
+		display: block;
+	}
+	.item.button {
+		width: inherit;
+		order: 1;
+		display: block;
+	}
+	a.socials:hover {
+		letter-spacing: 3px;
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		transform: scale(1.5);
+		transition: all 0.4s ease 0s;
+	}
+	.popularPostImages:hover, .bookImage:hover {
+		transform: scale(1.5);
+		transition: all 0.4s ease 0s;
+	}
+	.leftcolumn {
+		float: left;
+		width: 75%;
+	}
+	.rightcolumn {
+		float: left;
+		width: 25%;
+		padding-left: 20px;
+	}
+	a.socials {
+		padding: 10px;
+		height: 120px;
+		align-items: center;
+		margin: inherit;
+	}
+	a.favoriteBooks {
+		padding: 10px;
+		height: 120px;
+		display: block;
+		align-items: center;
+		margin: inherit; 
+	}
+	.popularPosts {
+		padding: 10px;
+		height: 120px;
+		align-items: center;
+		margin: inherit;
+		display: table-row;
+	}
+	.socials {
+		padding: 10px;
+		height: 120px;
+		align-items: center;
+		margin: inherit;
+		display: table-row;
+	}
+	.menu{
+		justify-content: center;
+	}
+	li.item.button{
+		padding: 30px;
+		
+	}
+	.button a{
+		font-size: 25px;
+	}
+	.button a:hover {
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		border-radius: 12px;
+		transition: all 0.4s ease 0s;
+		background-color: blueviolet;
+		border-color: blueviolet;
+		letter-spacing: 1px;
+	}
+	.favoriteButton:hover {
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		border-radius: 12px;
+		transition: all 0.4s ease 0s;
+		background-color: blueviolet;
+		border-color: blueviolet;
+		letter-spacing: 1px;
+	}
+	.postInputToggle:hover {
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		border-radius: 12px;
+		transition: all 0.4s ease 0s;
+		background-color: blueviolet;
+		border-color: blueviolet;
+		letter-spacing: 1px;
+	}
+	#postNameButton:hover {
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		border-radius: 12px;
+		transition: all 0.4s ease 0s;
+		background-color: green;
+		border-color: green;
+		letter-spacing: 1px;
+	}
+}
+
+ /* Set the size of the div element that contains the map */
+ #map {
+	height: 400px; 
+	width: 100%; 
+   }
+
+
+
+
+
