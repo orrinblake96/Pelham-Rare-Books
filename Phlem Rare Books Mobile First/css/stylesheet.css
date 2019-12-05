@@ -1,3 +1,4 @@
+/* ----------------------- Mobile first design styling --------------------------------------------- */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -15,7 +16,7 @@ body {
 
 h1 {
 	font-size: 50px;
-	text-align: left;
+	text-align: center;
 }
 
 h3, h2 {
@@ -33,7 +34,7 @@ h4 {
 }
 
 h6 {
-	color: #afa28c;
+	color: #11111;
 	font-size: 18px;
 }
 
@@ -43,6 +44,19 @@ p {
 	font-size: 18px;
 }
 
+/*----------- Main quote on about page ------------------*/
+.aboutTextCentered {
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+/* -------------Feedback text area ----------------------*/
+#feedbackText {
+	display: block;
+}
+
+/* ------------ images for home/about page ------------- */
 img.homePageMainImage {
 	width: 100%;
 	border-radius: 12px;
@@ -52,14 +66,43 @@ img.homePageMainImage {
 	margin-right: auto;
 }
 
+img.aboutPageImage {
+	width: 30%;
+	border-radius: 12px;
+	height: auto;
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Style the images into a grid on the home-page */
+.rowImageGrid {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.columnImageGrid {
+	flex: 25%;
+	padding: 0 4px;
+}
+
+.columnImageGrid img {
+	margin-top: 8px;
+	vertical-align: middle;
+}
+
+/* ------------- Center logo and set width ------------- */
 img.logo{
-	width: 60%;
+	width: 40%;
 	height: auto;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/* -------------styling for nav bar ------------- */
 nav{
 	background: #8D5A49;
     padding: 10px 20px;
@@ -130,18 +173,28 @@ ul {
     display: none;
 }
 
-input[type=text], select, textarea {
+/* Same style for both html tags */
+input[type=text], textarea {
     width: 100%;
     padding: 12px;
     border-radius: 4px;
     resize: vertical;
   }
+
+select {
+	width: 100%;
+	/* padding: 12px; */
+    border-radius: 4px;
+    resize: vertical;
+}
   
+  /* Name of the input box */
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
-  
+
+  /* instead of button use submit for the form */
   input[type=submit] {
     background-color: #8D5A49;
     color: #afa28c;
@@ -176,6 +229,7 @@ input[type=text], select, textarea {
   }
 /* ---------------------------------------------------------------------------------- */
 
+/* Product information styling */
 .productsInfo {
     padding: 7.5px 35px;
     color: #afa28c;
@@ -183,7 +237,8 @@ input[type=text], select, textarea {
     border-radius: 3px;
 }
 
-.favoriteButton, .buyButton {
+/* Handle styling for all of the button types */
+.favoriteButton, .buyButton, .emailGiftVoucherButton {
 	padding: 10px;
 	height: auto;
 	background-color: #794e3ffc;
@@ -222,7 +277,7 @@ input[type=text], select, textarea {
 	padding: 0%
 }
 
-/* Post image */
+/* Handle all image styling */
 .postImageDisplayed {
   width: 100%;
   max-width: 500px;
@@ -236,7 +291,7 @@ input[type=text], select, textarea {
     height: 250px;
   }
 
-/* Add a card effect for articles */
+/* Add  card effects for the different article cards needed */
 .card {
 	background-color: #8D5A49;
 	padding: 13px;
@@ -259,13 +314,13 @@ input[type=text], select, textarea {
 }
 
 .address {
-	color: #afa28c;
+	color: #111111;
 	font-size: 16px;
 	display: block;
 }
 
 .officeHours {
-	color: #afa28c;
+	color: #111111;
 	font-size: 16px;
 	display: block;
 }
@@ -341,9 +396,9 @@ a.socials{
 }
 /*------------------------------------------------------*/
 
-/*----------If screen is above 670 px then change nav bar styling-----------*/
-
-@media only screen and (min-width: 670px) {
+/* ----------------------- Desktop design styling --------------------------------------------- */
+@media only screen and (min-width: 600px) {
+	/* Remove toggle when nav bar is longer (desktop mode) & make nav bar buttons display in a block*/
 	.toggle{
 		display: none;
 	}
@@ -355,6 +410,7 @@ a.socials{
 		order: 1;
 		display: block;
 	}
+	/* --------------- on hover (desktop can handle far more stylised events than mobiles) */
 	a.socials:hover {
 		cursor: pointer;
 		letter-spacing: 3px;
@@ -363,55 +419,9 @@ a.socials{
 		transform: scale(1.5);
 		transition: all 0.4s ease 0s;
 	}
-	.popularPostImages:hover, .bookImage:hover {
+	.popularPostImages:hover, .bookImage:hover, img.aboutPageImage:hover, .columnImageGrid img:hover {
 		transform: scale(1.5);
 		transition: all 0.4s ease 0s;
-	}
-	.leftcolumn {
-		float: left;
-		width: 75%;
-	}
-	.rightcolumn {
-		float: left;
-		width: 25%;
-		padding-left: 20px;
-	}
-	a.socials {
-		padding: 10px;
-		height: 120px;
-		align-items: center;
-		margin: inherit;
-	}
-	a.favoriteBooks {
-		padding: 10px;
-		height: 120px;
-		display: block;
-		align-items: left;
-		margin: inherit; 
-	}
-	.popularPosts {
-		padding: 10px;
-		height: 120px;
-		align-items: center;
-		margin: inherit;
-		display: table-row;
-	}
-	.socials {
-		padding: 10px;
-		height: 120px;
-		align-items: center;
-		margin: inherit;
-		display: table-row;
-	}
-	.menu{
-		justify-content: center;
-	}
-	li.item.button{
-		padding: 30px;
-		
-	}
-	.button a{
-		font-size: 25px;
 	}
 	.button a:hover {
 		cursor: pointer;
@@ -423,7 +433,7 @@ a.socials{
 		border-color: blueviolet;
 		letter-spacing: 1px;
 	}
-	.favoriteButton:hover, .buyButton:hover {
+	.favoriteButton:hover, .buyButton:hover, .emailGiftVoucherButton:hover {
 		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
@@ -455,11 +465,60 @@ a.socials{
 	}
 	img.logo:hover {
 		cursor: pointer;
-		width: 60.5%;
+		width: 40.5%;
 		height: auto;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	/* Move colums apart when width is desktop */
+	.leftcolumn {
+		float: left;
+		width: 75%;
+	}
+	.rightcolumn {
+		float: left;
+		width: 25%;
+		padding-left: 20px;
+	}
+	/* restyle all cards so they look better in desktop mode */
+	a.socials {
+		padding: 10px;
+		height: 120px;
+		align-items: center;
+		margin: inherit;
+	}
+	a.favoriteBooks {
+		padding: 10px;
+		height: 120px;
+		display: block;
+		align-items: left;
+		margin: inherit; 
+	}
+	.popularPosts {
+		padding: 10px;
+		height: 120px;
+		align-items: center;
+		margin: inherit;
+		display: table-row;
+	}
+	.socials {
+		padding: 10px;
+		height: 120px;
+		align-items: center;
+		margin: inherit;
+		display: table-row;
+	}
+	/* -------------- make all nav bar items/buttons line up and incrase button font size */
+	.menu{
+		justify-content: center;
+	}
+	li.item.button{
+		padding: 30px;
+		
+	}
+	.button a{
+		font-size: 25px;
 	}
 }
 
@@ -467,9 +526,4 @@ a.socials{
  #map {
 	height: 400px; 
 	width: 100%; 
-   }
-
-
-
-
-
+}

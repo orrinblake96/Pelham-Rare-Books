@@ -11,6 +11,17 @@ $(function () {
     });
 });
 
+// function toggleNavBar() {
+//     var toggle = document.getElementsByClassName("toggle");
+//     var item = document.querySelector("item");
+
+//     if(item.classList.contains("active")){
+//         item.className.replace("active", " ")
+//     } else {
+
+//     }
+// }
+
 // display form
 function toggleInputForm(){
 	var inputForm = document.getElementById("inputForm");
@@ -33,7 +44,8 @@ function submitFeedback() {
     if(feedbackText === ""){
         document.getElementById("feedbackText").focus();
     } else {
-        feedbackButton.innerHTML = "Submitted Feedback!"
+        document.getElementById("feedbackText").style.display = "none";
+        feedbackButton.innerHTML = "Submitted Feedback!";
     }
 }
 /* 
@@ -66,60 +78,68 @@ var productsArray = [
         info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
     },
 	{
-        bookName: "The Homosapiens",
-        bookImage: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg",
-        price: 500,
-        author: "Charles Darwin",
-        genre: "Scientific",
-        info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
+        bookName: "Nineteen Eighty-Four",
+        bookImage: "https://www.deburcararebooks.com/wp-content/uploads/2019/08/1984-768x1024.jpg",
+        price: 425,
+        author: "George Orwell",
+        genre: "Fiction",
+        info: "Easton Press, Norwalk, Connecticut, 1992. Hardcover. First Edition; First Printing. Fine, Leather Bound. Book accented in 22kt gold. Printed on archival paper with gilded edges. The endsheets are of moire fabric with a silk ribbon page marker. Smyth sewing and concealed muslin joints to ensure the highest quality binding. The novel is set in an imagined future, the year 1984, when much of the world has fallen victim to perpetual war, omnipresent government surveillance, historical negationism and propaganda. Eric Arthur Blair (25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist and essayist, journalist and critic, whose work is characterised by lucid prose, awareness of social injustice, opposition to totalitarianism, and outspoken support of democratic socialism."
     },
 	{
-        bookName: "The Homosapiens",
-        bookImage: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg",
-        price: 500,
-        author: "Charles Darwin",
-        genre: "Scientific",
-        info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
+        bookName: "Dracula: STOKER, Bram, True First Edition",
+        bookImage: "https://www.deburcararebooks.com/wp-content/uploads/2019/01/Stoker110-687x1024.jpg",
+        price: 6500,
+        author: "Bram Stroker",
+        genre: "Fiction",
+        info: "Dracula is an 1897 Gothic horror novel by Irish author Bram Stoker. It introduced the character of Count Dracula, and established many conventions of subsequent vampire fantasy"
     },
 	{
-        bookName: "The Homosapiens",
-        bookImage: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg",
+        bookName: "Hamlet",
+        bookImage: "https://cdn.usborne.com/catalogue/covers/eng/max_covers/9780746096116.JPG?width=760&quality=60",
         price: 500,
-        author: "Charles Darwin",
-        genre: "Scientific",
-        info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
+        author: "William Shakespeare",
+        genre: "Tragedy",
+        info: "The Tragedy of Hamlet, Prince of Denmark, often shortened to Hamlet, is a tragedy written by William Shakespeare sometime between 1599 and 1602."
     },
 	{
-        bookName: "The Homosapiens",
-        bookImage: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg",
-        price: 500,
-        author: "Charles Darwin",
-        genre: "Scientific",
-        info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
+        bookName: "Whammond’s Illustrated Guide to Dublin and Wicklow",
+        bookImage: "https://www.deburcararebooks.com/wp-content/uploads/2018/12/Whammond018-681x1024.jpg",
+        price: 185,
+        author: "G.K. Whammond’s",
+        genre: "Travel",
+        info: "WHAMMOND, G.K. Whammond’s Illustrated Guide to Dublin and Wicklow. With an historical sketch of the city. Original Comments, Anecdotes, &c. A Book of Reference for Residents and Visitors. Illustrated with views of the Exhibition Palace, Kingstown Harbour, Sackville Street, Bank of Ireland (Old Irish Parliament Houses), Trinity College, Custom House, St. Patrick’s Cathedral and a map of the city. Dublin: Robert S. Magee, 1869. 12mo. pp. [10], 187, 69 (adverts). Pictorial wrappers. Spine professionally rebacked. A very good copy."
     },
 	{
-        bookName: "The Homosapiens",
-        bookImage: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg",
-        price: 500,
-        author: "Charles Darwin",
+        bookName: "Middle English translation of John Bradmore's (d. 1412), surgical-medical treatise, Philomena.",
+        bookImage: "https://www.maggs.com/media/3971502/223251_04.jpg",
+        price: 250000,
+        author: "John Bradmore",
         genre: "Scientific",
-        info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
+        info: "A second, previously unidentified, manuscript of the 1446 Middle English version of the Philomena of John Bradmore, a surgical-medical treatise by one of the most English famous surgeons of the early 15th Century. The only other example is in the British Library MS Harley 1736 and it is largely unpublished. It includes the famous account of how Bradmore saved the life of the young Prince of Wales (Prince Hal, the future King Henry V), after the Battle of Shrewsbury in 1403. It was owned and perhaps written by an early Tudor Barber-Surgeon Charles Whyte (d. 1545) and is presumably one of the two manuscript volumes described in his Will, the other being in the British Library (MS Sloane 776). The manuscript also includes an apparently unique late Middle English “Tretys of mynd” that may be the earliest English work on the subject of the mind and memory."
     },
 	{
-        bookName: "The Homosapiens",
-        bookImage: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg",
-        price: 500,
-        author: "Charles Darwin",
-        genre: "Scientific",
-        info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
+        bookName: "Ulysses",
+        bookImage: "https://d3525k1ryd2155.cloudfront.net/h/184/525/601525184.0.x.1.jpg",
+        price: 5000,
+        author: "James Joyce",
+        genre: "Fiction",
+        info: "Ulysses is a modernist novel by Irish writer James Joyce. It was first serialised in parts in the American journal The Little Review from March 1918 to December 1920 and then published in its entirety in Paris by Sylvia Beach on 2 February 1922, Joyce's 40th birthday."
     },
 	{
-        bookName: "The Homosapiens",
-        bookImage: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Origin_of_Species_title_page.jpg",
-        price: 500,
-        author: "Charles Darwin",
-        genre: "Scientific",
-        info: "On the Origin of Species, published on 24 November 1859, is a work of scientific literature by Charles Darwin which is considered to be the foundation of evolutionary biology. Darwin's book introduced the scientific theory that populations evolve over the course of generations through a process of natural selection"
+        bookName: "Don Quixote",
+        bookImage: "https://images.penguinrandomhouse.com/cover/9780679602866",
+        price: 15000,
+        author: "Miguel de Cervantes",
+        genre: "Satire",
+        info: "The Ingenious Gentleman Don Quixote of La Mancha, or just Don Quixote, is a Spanish novel by Miguel de Cervantes. Published in two parts, in 1605 and 1615, Don Quixote is the most influential work of literature from the Spanish Golden Age and the entire Spanish literary canon."
+    },
+    {
+        bookName: "The Great Gatsby",
+        bookImage: "https://almabooks.com/wp-content/uploads/2016/10/9781847496140.jpg",
+        price: 200,
+        author: "F. Scott Fitzgerald",
+        genre: "Tragedy",
+        info: "The Great Gatsby is a 1925 novel written by American author F. Scott Fitzgerald that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922."
     }
 ];
 var favoriteBooks = [];
@@ -216,6 +236,14 @@ function updateProductsList() {
     leftColCard.innerHTML += "<h4>" + "Genre: </h4>" + "<p>" + productsArray[0].genre + "</p> <br>";
     leftColCard.innerHTML += "<h4>" + "Description:  </h4>" + "<p>" + productsArray[0].info + "</p> <br>";
 }
+
+// called when genre selection is changed
+function genreSelection(){
+    var genreList = document.getElementById("postBookGenre");
+    var genreName = genreList.options[genreList.selectedIndex].value;
+    alert(genreName);
+}
+
 //regex to check book name is valid
 function checkName(postName){
     //any Uppercase/Lowercase letters & numbers, between 1-50 characters

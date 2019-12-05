@@ -7,7 +7,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet preload"
 		type="text/css">
 	<link rel="shortcut icon" type="image/png" href="images/faviconV2.png" />
-	<link href="css/flex-nav-style.css" rel="stylesheet" type="text/css">
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -68,13 +68,16 @@
 					<label for="postBookGenre">Book Genre</label>
 				</div>
 				<div class="bookInfoInputBox">
-					<select id="postBookGenre" name="postBookGenre">
+					<select id="postBookGenre" name="postBookGenre" onchange="genreSelection()">
 						<option value="Fantasy">Fantasy</option>
 						<option value="History">History</option>
-						<option value="Realigious">Realigious</option>
+						<option value="Religious">Realigious</option>
 						<option value="Fiction">Fiction</option>
 						<option value="Mystery">Mystery</option>
 						<option value="Thriller">Thriller</option>
+						<option value="Travel">Travel</option>
+						<option value="Satire">Satire</option>
+						<option value="Science Fiction">Science Fiction</option>
 					</select>
 				</div>
 			</div>
@@ -132,7 +135,7 @@
 
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/nav-script.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>
