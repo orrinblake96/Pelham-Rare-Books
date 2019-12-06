@@ -11,17 +11,6 @@ $(function () {
     });
 });
 
-// function toggleNavBar() {
-//     var toggle = document.getElementsByClassName("toggle");
-//     var item = document.querySelector("item");
-
-//     if(item.classList.contains("active")){
-//         item.className.replace("active", " ")
-//     } else {
-
-//     }
-// }
-
 // display form
 function toggleInputForm(){
 	var inputForm = document.getElementById("inputForm");

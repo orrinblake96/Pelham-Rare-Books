@@ -34,14 +34,15 @@ h4 {
 }
 
 h6 {
-	color: #11111;
+	color: #111111;
 	font-size: 18px;
 }
 
 p {
     color: #111111;
-    display: inline;
+    /* display: inline; */
 	font-size: 18px;
+	margin-bottom: 8px;
 }
 
 /*----------- Main quote on about page ------------------*/
@@ -66,7 +67,7 @@ img.homePageMainImage {
 	margin-right: auto;
 }
 
-img.aboutPageImage {
+img.aboutPageImage, img.homePageSmallImages {
 	width: 30%;
 	border-radius: 12px;
 	height: auto;
@@ -91,6 +92,7 @@ img.aboutPageImage {
 .columnImageGrid img {
 	margin-top: 8px;
 	vertical-align: middle;
+	border-radius: 5px;
 }
 
 /* ------------- Center logo and set width ------------- */
@@ -106,7 +108,7 @@ img.logo{
 nav{
 	background: #8D5A49;
     padding: 10px 20px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
 }
 
 /*---------------------- Style Dropdown Menu ------------------------------*/
@@ -168,7 +170,11 @@ ul {
 	border-radius: 12px;
 	border-color: #794e3ffc;
 }
+.postInputToggle:active {
+	background-color: #422b23fc;
+}
 
+/* id is used for Keiths Javascript part - not the css */
 #inputForm {
     display: none;
 }
@@ -296,7 +302,7 @@ select {
 	background-color: #8D5A49;
 	padding: 13px;
 	margin-top: 20px;
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	border-color: #8D5A49;
 }
 
@@ -304,7 +310,7 @@ select {
 	background-color: #8D5A49;
 	padding: 13px;
 	margin-top: 20px;
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	border-color: #8D5A49;
 	text-align: center;
 }
@@ -395,6 +401,148 @@ a.socials{
     font-size: 5em;
 }
 /*------------------------------------------------------*/
+
+.footer {
+	margin-top: 10px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #8D5A49;
+	color: #111111;
+	text-align: center;
+	border-radius: 12px;
+	border-color: #8D5A49;
+}
+
+/* ---------------------- Footer for Pages (W3 schools help) ------------------------- */
+
+footer {
+	position: absolute;
+}
+
+.footer-distributed{
+	background-color: #794e3ffc;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 20px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.footer-distributed .footer-center i{
+	margin-left: 0;
+}
+
+.footer-distributed .footer-links{
+	color:  #111111;
+	margin: 20px 0 12px;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  #111111;
+}
+
+/* Footer Center Styling */
+.footer-distributed .footer-center i{
+	background-color:  #111111;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 22px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #111111;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+/* Right side of footer, links to socials */
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #111111;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #794e3ffc;
+	border-radius: 2px;
+ 
+	font-size: 40px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
+.twitter__footer {
+	color: #6699FF;
+}
+
+.facebook__footer {
+	color: #3b5998;
+}
+
+.instagram__footer {
+	color: #C13584;
+}
+/* ---------------- END OF FOOTER----------------- */
 
 /* ----------------------- Desktop design styling --------------------------------------------- */
 @media only screen and (min-width: 600px) {
@@ -509,6 +657,11 @@ a.socials{
 		margin: inherit;
 		display: table-row;
 	}
+	.card, .socialCard,
+	.bookCoversCard, .bookCard,
+	.addressCard, .favoriteCard {
+		border-radius: 8px;
+	}
 	/* -------------- make all nav bar items/buttons line up and incrase button font size */
 	.menu{
 		justify-content: center;
@@ -520,10 +673,38 @@ a.socials{
 	.button a{
 		font-size: 25px;
 	}
+	/* -------------- Unstack footer --------------------- */
+	footer {
+		position: static;
+	}
+	.footer-distributed .footer-left {
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+	}
+	.footer-distributed .footer-center {
+		display: inline-block;
+		vertical-align: top;
+		width: 35%;
+	}
+	.footer-distributed .footer-right {
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+	}
 }
 
- /* Set the size of the div element that contains the map */
- #map {
+ /* ----------------------- GOOGLE MAP ----------------------- */
+ .map {
 	height: 400px; 
 	width: 100%; 
 }
+
+p.map {
+	height: 300px; 
+	width: 40%; 
+}
+
+/* ----------------------- END OF MAP STYLING ---------------------- */
+
+
