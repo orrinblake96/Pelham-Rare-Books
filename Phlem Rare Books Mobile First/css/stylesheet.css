@@ -196,6 +196,7 @@ select {
   
   /* Name of the input box */
   label {
+	font-family: "asap";
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
@@ -574,46 +575,46 @@ footer {
 	.button a:hover {
 		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 1);
 		border-radius: 12px;
 		transition: all 0.4s ease 0s;
-		background-color: blueviolet;
-		border-color: blueviolet;
+		background-color: #4d3229fc;
+		border-color: #4d3229fc;
 		letter-spacing: 1px;
 	}
 	.favoriteButton:hover, .buyButton:hover, .emailGiftVoucherButton:hover {
 		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 1);
 		border-radius: 12px;
 		transition: all 0.4s ease 0s;
-		background-color: blueviolet;
-		border-color: blueviolet;
+		background-color: #4d3229fc;
+		border-color: #4d3229fc;
 		letter-spacing: 1px;
 	}
 	.postInputToggle:hover {
 		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 1);
 		border-radius: 12px;
 		transition: all 0.4s ease 0s;
-		background-color: blueviolet;
-		border-color: blueviolet;
+		background-color: #4d3229fc;
+		border-color: #4d3229fc;
 		letter-spacing: 1px;
 	}
 	#postNameButton:hover {
 		cursor: pointer;
 		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-		text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+		text-shadow: 0px 0px 1.5px rgba(255, 255, 255, 1);
 		border-radius: 12px;
 		transition: all 0.4s ease 0s;
-		background-color: green;
-		border-color: green;
+		background-color: #4d3229fc;
+		border-color: #4d3229fc;
 		letter-spacing: 1px;
 	}
 	img.logo:hover {
 		cursor: pointer;
-		width: 40.5%;
+		width: 41%;
 		height: auto;
 		display: block;
 		margin-left: auto;
@@ -671,7 +672,7 @@ footer {
 		
 	}
 	.button a{
-		font-size: 25px;
+		font-size: 30px;
 	}
 	/* -------------- Unstack footer --------------------- */
 	footer {
@@ -693,6 +694,65 @@ footer {
 		width: 30%;
 	}
 }
+
+/* ----------- buy a book ---------------------- */
+/* The popup form - hidden by default */
+.form-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	border-radius: 8px;
+	z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+	max-width: 300px;
+	padding: 10px;
+	border-radius: 8px;
+	background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom:10px;
+	opacity: 0.8;
+	border-radius: 8px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+	background-color: red;
+	border-radius: 8px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+	opacity: 1;
+  }
 
  /* ----------------------- GOOGLE MAP ----------------------- */
  .map {

@@ -29,7 +29,7 @@
 	</nav>
 
 
-	<button onclick="toggleInputForm()" id="formButton" class="postInputToggle">Upload a Book</button>
+	<button onclick="toggleInputForm()" id="formButton" class="postInputToggle"> <i class="fas fa-upload"> </i> Upload a Book</button>
 
 	<div id="inputForm" class="container">
 		<form>
@@ -43,7 +43,7 @@
 			</div>
 			<div class="bookInfoInputRow">
 				<div class="bookInfoInputHeadings">
-					<label for="book">Book Image</label>
+					<label for="book">Book Image (URL)</label>
 				</div>
 				<div class="bookInfoInputBox">
 					<input type="text" id="postBookImage" name="postBookImage" placeholder="Book Image">
@@ -73,7 +73,7 @@
 					<select id="postBookGenre" name="postBookGenre" onchange="genreSelection()">
 						<option value="Fantasy">Fantasy</option>
 						<option value="History">History</option>
-						<option value="Religious">Realigious</option>
+						<option value="Religious">Religious</option>
 						<option value="Fiction">Fiction</option>
 						<option value="Mystery">Mystery</option>
 						<option value="Thriller">Thriller</option>
@@ -102,6 +102,46 @@
 	<div class="row">
 		<div class="leftcolumn">
 			<div id="productsInfo" class="productsInfo card">
+				<div class="form-popup" id="checkoutForm">
+					<form class="form-container">
+						<h1>Checkout</h1>
+					
+						<label for="creditCardNumber"><b>Card Number</b></label>
+						<input type="text" pattern="[0-9]{13,16}" placeholder="Enter Credit Card Number" name="creditCardNumber" required>
+
+						<label for="expiryDate"><b>Expiry Date</b></label>
+						<select>
+							<option value=''>Month</option>
+							<option value='01'>January</option>
+							<option value='02'>February</option>
+							<option value='03'>March</option>
+							<option value='04'>April</option>
+							<option value='05'>May</option>
+							<option value='06'>June</option>
+							<option value='07'>July</option>
+							<option value='08'>August</option>
+							<option value='09'>September</option>
+							<option value='10'>October</option>
+							<option value='11'>November</option>
+							<option value='12'>December</option>
+						</select> 
+						<select>
+							<option value=''>Year</option>
+							<option value='19'>2019</option>
+							<option value='20'>2020</option>
+							<option value='21'>2021</option>
+							<option value='22'>2022</option>
+							<option value='23'>2023</option>
+						</select> 
+						<input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
+
+						<label for="cvc"><b>CVC</b></label>
+						<input type="text" pattern="[0-9]{3,4}" placeholder="Enter CVC" name="cvc" required>
+					
+						<button onclick="buyBook(); closeForm(); return false;" class="btn">Purchase Book</button>
+						<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+					</form>
+				</div>					
 			</div>
 		</div>
 		<div class="rightcolumn">
