@@ -134,6 +134,32 @@ var productsArray = [
     }
 ];
 var favoriteBooks = [];
+var bookGenreList = [
+    "Fantasy",
+    "History",
+    "Religious",
+    "Fiction",
+    "Mystery",
+    "Thriller",
+    "Satire",
+    "Travel",
+    "Science Fiction",
+    "autobiography",
+    "Education",
+    "Graphic Novel",
+    "Comics",
+    "Art",
+    "Horror"
+];
+
+//Use array to create drop down list for book upload form
+for (var genres in bookGenreList) {
+    var select = document.getElementById("postBookGenre");
+    var el = document.createElement("option");
+    el.textContent = bookGenreList[genres];
+    el.value = bookGenreList[genres];
+    select.appendChild(el);
+}
 
 function getPostDetails() {
     var leftColCard = document.getElementById("productsInfo");
