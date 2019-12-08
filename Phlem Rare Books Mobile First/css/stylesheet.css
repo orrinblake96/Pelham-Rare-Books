@@ -403,6 +403,12 @@ a.socials{
 }
 /*------------------------------------------------------*/
 
+/* ---------------------- Footer for Pages (W3 schools help) ------------------------- */
+
+footer {
+	position: absolute;
+}
+
 .footer {
 	margin-top: 10px;
 	left: 0;
@@ -413,12 +419,6 @@ a.socials{
 	text-align: center;
 	border-radius: 12px;
 	border-color: #8D5A49;
-}
-
-/* ---------------------- Footer for Pages (W3 schools help) ------------------------- */
-
-footer {
-	position: absolute;
 }
 
 .footer-distributed{
@@ -511,6 +511,7 @@ footer {
 	margin-bottom: 20px;
 }
  
+/* footer icons from font-awesome */
 .footer-distributed .footer-icons{
 	margin-top: 25px;
 }
@@ -619,7 +620,9 @@ footer {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+		transition: all 0.4s ease 0s;
 	}
+	/* --------------- Hover Style END -------------------- */
 	/* Move colums apart when width is desktop */
 	.leftcolumn {
 		float: left;
@@ -693,7 +696,19 @@ footer {
 		vertical-align: top;
 		width: 30%;
 	}
+	.footer-distributed .footer-links a:hover{
+		transform: scale(1.1);
+		text-shadow: 0px 0px 1px rgba(255, 255, 255, 1);
+		transition: all 0.4s ease 0s;
+	}
+	.footer-icons a:hover {
+		transform: scale(1.4);
+		text-shadow: 0px 0px 1px rgba(255, 255, 255, 1);
+		transition: all 0.4s ease 0s;
+	}
 }
+
+/* ------------------ Desktop Responsiveness END ------------------- */
 
 /* ----------- buy a book ---------------------- */
 /* The popup form - hidden by default */
@@ -753,6 +768,8 @@ footer {
   .form-container .btn:hover, .open-button:hover {
 	opacity: 1;
   }
+
+  /* -------------- Buy Book Style End ------------------------------- */
 
  /* ----------------------- GOOGLE MAP ----------------------- */
  .map {
